@@ -1,0 +1,881 @@
+/*
+ 1- comman styles
+ 2- General styles
+ 3-sections
+   3.0-eader section
+   3.1-Home section
+   3.2-About section
+   3.3- Portfolio section
+   3.4-Services section
+   3.5-Prices section
+   3.6-Team section
+   3.7-Blog section
+   3.8-Contact Us section
+*/
+/* 1- common*/
+/*
+ -container 
+ -overlay
+ -opacity hover 
+ -section header
+ -section padding
+ -hover effect 1 ( left to right)
+ -hover effect 2 ( top to bottom)
+*/
+/* Gemaeral css style*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 5000px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+}
+
+.clear {
+    clear: both;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: montserrat, sans-serif;
+}
+
+button {
+    font-family: inherit;
+}
+
+.pd-y {
+    padding: 60px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.section-header .section-title {
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.section-header .line {
+    display: block;
+    height: 4px;
+    width: 70px;
+    margin: 3px auto 10px auto;
+    background-color: #6195ff;
+}
+
+
+/*Header*/
+.header {
+    
+    background: rgb(49, 63, 49);
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    z-index: 10;
+}
+
+.header-content {
+    overflow: hidden;
+   display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+}
+
+
+.header .box{
+    height: 40px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 10px;
+    background-color: #fff;
+    border-radius: 30px;
+    float: left;
+}
+
+
+.header .nav {
+    width: 100%;
+    float: left;
+    list-style: none;
+    text-align: right;
+
+}
+
+.header .nav li {
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+}
+
+.header .nav li a {
+    color: bisque;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    padding: 5px 3px;
+
+}
+
+.header .nav li a:after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    background-color: #6195ff;
+}
+
+.header .nav li a:hover:after {
+    width: 100%;
+}
+
+
+/* Home section*/
+.home {
+    height: 150vh;
+    background-image: url(../images/template2/food/ea.jpg);
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hover-opacity {
+    transition: opacity .2s;
+}
+
+
+.hover-opacity:hover {
+    opacity: 0.8;
+}
+
+.ltr-effect {
+    position: relative;
+}
+
+
+.ltr-effect:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    top: 0;
+    left: 0;
+    
+    z-index: -1;
+    transition: width 0.4s;
+}
+
+.ltr-effect:hover::after {
+    width: 100%;
+   height: 100%;
+   opacity: 1;
+}
+
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.home .tittle {
+    color: rgb(250, 244, 237);
+
+    font-size: 190px;
+    text-transform: uppercase;
+
+}
+
+.home .home-desc {
+    color: #fff;
+    margin: 20px;
+    letter-spacing: 2px;
+    line-height: 1.5px;
+
+
+}
+
+.home .btn {
+    min-width: 160px;
+    padding: 10px 0;
+    border-radius: 15px;
+    border: 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.home .btn-start {
+    margin-right: 10px;
+    background-color: grey;
+}
+
+.home .btn-learn {
+    background-color: #787b81;
+    color: #fff;
+
+}
+
+/*About section*/
+.about {}
+
+.about-content {
+    overflow: hidden;
+}
+
+.about-item {
+    width: 250px;
+    height: 305px;
+    float: left;
+    text-align: center;
+    border: 1px solid rgba(0, 07, 0, 0.5);
+    margin: 0 5%;
+    padding: 40px 16px;
+    border-radius: 30px;
+
+}
+
+.about-item:hover {
+    background: grey;
+}
+
+.about-item:hover .about-item-title {
+    color: white;
+}
+
+.about-item .icon {
+    color: #6195ff;
+    margin-bottom: 10px;
+}
+
+.about-item-title {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.about-item-desc {
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.about-item-link {
+    color: #132e64;
+    text-transform: capitalize;
+}
+
+/* Portfolio section*/
+.portfolio {
+    background: rgba(157, 161, 161, 0.479);
+}
+
+.portfolio-content {
+    overflow: hidden;
+}
+
+.portfolio-item {
+    width: 25%;
+    float: left;
+    margin: 0 15;
+    margin-bottom: 24px;
+    position: relative;
+    padding: 10px;
+}
+
+.Beverages {
+    height: 445px;
+}
+
+.Events {
+    height: 300px;
+}
+
+.portfolio-item .layer-content {
+    position: absolute;
+    top: 0;
+    left: o;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    /*visibility: hidden;/
+    /transition: opacity 0.5 ;*/
+}
+
+.portfolio-item:hover .layer-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.layer-content .layer-web {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-transform: capitalize;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.layer-content a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #645f5f;
+
+
+}
+
+.layer-content a i {
+    line-height: 30px;
+}
+
+.portfolio-item:hover .layer-content-title,
+.portfolio-item:hover .layer-content a,
+.portfolio-item:hover .layer-content .Category {
+    top: 0;
+
+}
+
+.layer-content .Category {
+    color: rgb(201, 201, 235);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    top: 8px;
+
+
+}
+
+.layer-content-title {
+
+    font-size: 18px;
+    color: rgb(26, 27, 29);
+    margin-bottom: 8px;
+    position: relative;
+    top: 8px;
+
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; 
+}
+
+/* offer section*/
+.offer {}
+
+.offer-content {
+    overflow: hidden;
+}
+
+.offer-item {
+    width: 30%;
+    float: left;
+    margin-bottom: 40px;
+    border: 1px solid grey;
+    border-radius: 14px;
+    padding: 20px 15px 30px 70px;
+    position: relative;
+}
+
+.offer-item.mg {
+    margin: 0 5%;
+}
+
+.offer-item .icon {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    color: rgb(117, 71, 10);
+}
+
+.offer-item-title {
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    transition: color 0.5s;
+}
+
+.offer-item-desc {
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: rgb(99, 59, 8);
+}
+
+.offer-item:hover .offer-item-title {
+    color: rgb(124, 99, 53);
+
+}
+
+.ltr-effect:after {
+    background: rgb(145, 163, 109);
+}
+
+/*services section*/
+.services {
+    background-color: white;
+}
+
+.services-item {
+    width: 50%;
+    float: left;
+}
+
+.services-item .section-header {
+    text-align: left;
+}
+
+.services-item .section-header .line {
+    margin: 0 0 30px 0;
+}
+
+.services-item-desc {
+    padding-right: 20px;
+    color: rgb(133, 110, 53);
+    line-height: 1.2;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.services-list {
+    list-style: none;
+}
+
+.services-list li {
+    margin-bottom: 15px;
+    color: rgb(133, 110, 53);
+}
+
+.services-list li i {
+    border: 0 solid rgb(148, 95, 26);
+    color: rgb(148, 87, 8);
+    padding: 6px 3px;
+}
+
+.services-item img img {
+    width: 100%;
+}
+
+.services-bollets {
+    list-style: none;
+    text-align: center;
+}
+
+.services-bollets li {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-color: rgb(236, 229, 216);
+    margin: 10px 5px;
+    border-radius: 50%;
+}
+
+.services-bollets li.active {
+    background: rgb(124, 99, 53);
+}
+
+.services-bollets li:hover {
+    background: rgb(124, 99, 53);
+}
+
+.services-bollets li:hover {
+    background: rgb(124, 99, 53);
+}
+
+/*section number*/
+.numbers {
+    position: relative;
+    background-image: url("../images/template2/food/Valentines\ day\ ideas.jpg");
+    height: 300px;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.numbers-items {
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.number-item {
+    width: 25%;
+    float: left;
+    text-align: center;
+
+}
+
+.number-item .icon {
+    color: rgb(27, 16, 2);
+    margin-bottom: 15px;
+}
+
+.number-item-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: bisque;
+}
+
+.number-item-text {
+    color: beige;
+}
+
+/* Table section*/
+.table {}
+
+.table.plans {
+    overflow: hidden;
+}
+
+.table-item {
+    width: 30%;
+    float: left;
+    padding: 25px 20px;
+    border: 1px solid burlywood;
+    text-align: center;
+}
+
+.table-item.mg {
+    margin: 0 5%;
+}
+
+.table-item-text {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: rgb(53, 36, 14);
+}
+
+.table-item-parmanth {
+    width: 100px;
+    height: 100px;
+    padding: 30px 0;
+    margin: 15px auto;
+    border: 1.5px solid rgb(245, 210, 10);
+    border-radius: 50%;
+}
+
+.table-item-parmanth .ad {
+    font-size: 30px;
+}
+
+.table-item-parmanth .month {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.table-item-parmanth2 {
+    width: 70px;
+
+}
+
+.table-list {
+    list-style: none;
+}
+
+.table-list li {
+    color: rgb(35, 22, 5);
+    line-height: 1.6;
+}
+
+.tb-effect {
+    position: relative;
+}
+
+.tb-effect:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transition: height 0.5s;
+  
+    background: rgb(128, 128, 128);
+}
+
+.tb-effect:hover:after {
+    height: 100%;
+}
+
+/*testimonail section*/
+.testimonail {
+    position: relative;
+    background-image: url(../images/template2/food/Valentines\ day\ ideas.jpg);
+    background-attachment: fixed;
+    height: 600px;
+    background-size: cover;
+
+}
+
+.testimonail-content {
+    overflow: hidden;
+    padding: 110px 0;
+    width: 100%;
+    margin: auto;
+}
+
+.testimonail-item {
+    width: 50%;
+    float: left;
+
+}
+
+.testimonail-item .testimonail-toplayer {
+    padding: 10px 2px 40px 100px;
+    position: relative;
+}
+
+.testimonail-item .testimonail-toplayer img {
+    position: relative;
+    width: 150px;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+.testimonail-item .testimonail-toplayer h2 {
+    margin-bottom: 60px;
+}
+
+.testimonail-item .testimonail-toplayer span {
+    color: black;
+    font-size: 25;
+}
+
+
+.testimonail-desc {
+    line-height: 1.5;
+    font-size: 25;
+}
+
+/* Team section*/
+
+.team {}
+
+.team-content {
+    overflow: hidden;
+}
+
+.team-item {
+    width: 30%;
+    float: left;
+    background: #d0d5e0;
+    padding: 20px 15px;
+    text-align: center;
+}
+
+
+.team-item img {
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.team-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.team-overlay a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    color:aliceblue;
+    background-color: #242a0f;
+    margin-left: auto;
+
+}
+
+.team-item.mg {
+    margin: 0 5%;
+}
+
+.team-item .team-info-title {
+    color: rgb(11, 32, 44);
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.team-item .team-info-text {
+    color: rgb(11, 32, 44);
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.team-item:hover .team-overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.team-item.tb-effect {
+    z-index: 1;
+}
+
+/* Blog page*/
+.blog {}
+
+.blog-item-img {
+    position: relative;
+}
+
+.blog-item-img::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transition: height 0.5s;
+    background: rgb(128, 128, 128);
+}
+
+.blog-item-img:hover::after {
+    height: 100%;
+}
+
+.blog-content {
+    overflow: hidden;
+
+}
+
+.blog-item {
+    width: 30%;
+    float: left;
+    background: white;
+}
+
+.blog-item-img img {
+    width: 100%;
+}
+
+.blog-info {
+    padding: 20px;
+}
+
+.blog-list {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.blog-list li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.blog-list li i {
+    color: #756e69;
+}
+
+.blog-title {
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.blog-desc {
+    color: rgb(43, 41, 41);
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.blog-link {
+    color: #756e69;
+    text-align: center;
+}
+
+.blog-item.mg {
+    margin: 0 5%;
+
+}
+
+.Salmon {
+    height: 450px;
+}
+
+.Pavlova {
+    height: 450px;
+}
+
+.Mackerel {
+    height: 450;
+}
+
+/*footar section*/
+.footar img {
+    width: 300px;
+
+    border-radius: 20px;
+
+}
+
+.footar {
+    background: rgb(238, 234, 228);
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footar-links {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.footar-links li {
+    display: inline-block;
+}
+
+.footar-links li a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: rgb(231, 222, 203);
+    color: #687286;
+    border-radius: 50px;
+}
+
+.footar-links li a i {
+    line-height: 50px;
+}
+
+.footar-right {
+    color: rgb(65, 53, 33);
+    font-size: 16px;
+    text-transform: uppercase;
+}
